@@ -5,7 +5,7 @@ class Person
 
   def initialize(attributes)
     attributes.each do |attribute_key, attribute_value|
-      self.attribute_key = attribute_value
+      self.send(("#{attribute_key}="), attribute_value)
     end
   end
 end
